@@ -1,0 +1,20 @@
+{
+    "manifest_version": 2,
+    "name": "Google site with MathJax",
+    "description": "Renders equations with MathJax",
+    "version": "0.0.1",
+    "permissions": [
+        "https://sites.google.com/*"
+    ],
+    "web_accessible_resources": ["mathjax_config.js", "MathJax/*", "jquery-min-1.7.2.js"],
+    "content_scripts": [{
+        "matches": ["https://sites.google.com/site/ogiekako/*"],
+        "js": ["jquery-min-1.7.2.js", "jquery.include.pack-1.1.js", "content.js"],
+        "run_at": "document_end"
+    }],
+    "icons": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    }
+}
